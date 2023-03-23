@@ -43,9 +43,30 @@ class Game {
   //SA
   play() {
     this.handleElements();
+       
+    Player.getPlayersInfo();
 
-    //Player.getPlayersInfo();
-
+    if (allPlayers !== undefined) {//se todos os jogadores já  estiverem definidos, irá exibir a pista e os carros 
+    
+     image(track, 0, -height * 5, width, height 8 6);
+     //Ao exibir a imagem,manteremos a posição x como 0 e y como(-height * 5); isso criará a pista fora da tela
+     //por que nao queremos mostrar a pista completa de uma vez, a pista será exibida conforme o jogador mover o carro
+     //indice dos jogadores iniciais em 0. O primwieo recebe o numero 1. O segundo recebe o numero 2.
+     var index = 0;
+     for ( var plr in allPlayers0 {
+      //plr é a variável usada para atravessar, e allPlayers é o objeto JavaScript no qual procuramos os valores
+      //ou seja, para realizar o poisicionamente de todas as informações de todos os jogadores
+      var x = allPlayers[plr].positionX;
+      var y = height - allPlayers[plr].positionY;
+      cars[index].position.x = x;
+      cars[index].position.y = y;
+      //adiciona um ao indice anterior
+      idex = index + 1;
+      }
+      //se a tecla pressionada para baixo é a SETA PARA CIMA
+      if
+   
+   
    
       drawSprites();
     }
